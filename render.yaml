@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: AutoByte_BOT
+    env: node
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SESSION_ID
+        sync: false # You'll set this in Render dashboard
